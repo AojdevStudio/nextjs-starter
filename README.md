@@ -1,6 +1,6 @@
-# Next.js Starter Kit
+# Dental Case Acceptance Analytics
 
-A modern, feature-rich starter template for Next.js applications. Built with the latest stable versions and best practices to help you start your projects quickly.
+A comprehensive analytics dashboard showing dental case acceptance rates, financial impact, and industry benchmarks.
 
 ## 🚀 Features
 
@@ -21,48 +21,38 @@ A modern, feature-rich starter template for Next.js applications. Built with the
 ## 📋 Prerequisites
 
 - Node.js 18.17.0 or later
-- npm or yarn or pnpm
+- npm or yarn package manager
 
 ## 🏗️ Getting Started
 
 > **Note:** This starter template uses `@latest` versions for all dependencies, ensuring you always get the most up-to-date packages when you create a new project. This design choice makes the template future-proof, but be aware that breaking changes in newer versions may require adjustments.
 
-1. Clone this repository:
-
+1. Clone the repository:
 ```bash
-git clone https://github.com/AojdevStudio/nextjs-starter.git my-project
-cd my-project
+git clone <your-repo-url>
+cd dental-case-acceptance-analytics
 ```
 
 2. Install dependencies:
-
 ```bash
 npm install
 # or
 yarn install
-# or
-pnpm install
 ```
 
-3. Set up your environment variables:
-
+3. Create a `.env.local` file in the root directory:
 ```bash
-cp .env.example .env.local
+touch .env.local
 ```
 
-Edit `.env.local` and add your own values.
-
-4. Run the development server:
-
+4. Start the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## 📁 Project Structure
 
@@ -274,3 +264,55 @@ The sample chart in `src/app/page.tsx` can be easily customized:
 - Add more charts to the dashboard
 
 For more chart types and options, visit the [React Chart.js 2 documentation](https://react-chartjs-2.js.org/).
+
+## Running on Replit
+
+1. Create a new Repl and select "Import from GitHub"
+2. Paste your repository URL
+3. In the Replit shell, run:
+```bash
+npm install
+npm run dev
+```
+
+4. Important: Make sure to set the "Run" button command to:
+```bash
+npm run dev
+```
+
+## Environment Variables
+
+No environment variables are required for basic functionality.
+
+## Built With
+
+- [Next.js](https://nextjs.org/) - The React framework
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [Recharts](https://recharts.org/) - Charting library
+- [shadcn/ui](https://ui.shadcn.com/) - UI components
+
+## Development
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Module not found errors**
+   - Run `npm install` again
+   - Clear `.next` cache: `rm -rf .next`
+   - Ensure Node.js version is 18.17.0 or later
+
+2. **Build failures**
+   - Ensure all dependencies are installed
+   - Clear npm cache: `npm cache clean --force`
+   - Delete node_modules and reinstall: `rm -rf node_modules && npm install`
+
+3. **Replit-specific issues**
+   - Use Node.js 18.x or later in Replit
+   - Set correct run command in Replit config
+   - Ensure all dependencies are properly installed

@@ -9,7 +9,6 @@
 # next.js
 /.next/
 /out/
-.swc
 
 # production
 /build
@@ -17,6 +16,7 @@
 # misc
 .DS_Store
 *.pem
+.env*.local
 
 # debug
 npm-debug.log*
@@ -24,8 +24,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*.local
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # vercel
 .vercel
@@ -33,3 +36,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Replit specific
+.replit
+replit.nix
+.config
