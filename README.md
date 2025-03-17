@@ -30,7 +30,7 @@ A modern, feature-rich starter template for Next.js applications. Built with the
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/nextjs-starter.git my-project
+git clone https://github.com/AojdevStudio/nextjs-starter.git my-project
 cd my-project
 ```
 
@@ -199,7 +199,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Copyright (c) 2024 Next.js Starter Kit. All rights reserved.
 
 ## 🙏 Acknowledgments
 
@@ -210,3 +212,65 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [Jest](https://jestjs.io/)
+
+## 🎯 Quick Start for Basic Webpage
+
+If you want to use this starter kit for a simple webpage (without authentication and complex features), follow these steps:
+
+1. Clone this repository:
+```bash
+git clone https://github.com/AojdevStudio/nextjs-starter.git my-project
+cd my-project
+```
+
+2. Run the simplification script:
+```bash
+node scripts/simplify.js
+```
+
+This script will:
+- Remove unnecessary directories and files
+- Remove unused dependencies
+- Add Chart.js and React Chart.js 2
+- Update the homepage with a sample chart
+- Install the required dependencies
+
+The simplified structure will be:
+```
+my-project/
+├── public/                   # Static assets
+├── src/                     # Source directory
+│   ├── app/                 # App Router pages
+│   │   ├── globals.css      # Global styles
+│   │   ├── layout.tsx      # Root layout
+│   │   └── page.tsx        # Home page
+│   ├── components/         # React components
+│   │   ├── common/         # Common components
+│   │   └── ui/            # UI components
+│   └── lib/               # Utility libraries
+├── package.json           # Package dependencies
+├── tailwind.config.js     # Tailwind configuration
+└── tsconfig.json         # TypeScript configuration
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+Your simplified Next.js application will be running at [http://localhost:3000](http://localhost:3000) with:
+- ⚡ Modern React and Next.js
+- 🎨 Tailwind CSS styling
+- 📊 Chart.js integration
+- 📱 Responsive design
+- 🌓 Dark mode support
+
+### Customizing the Chart
+
+The sample chart in `src/app/page.tsx` can be easily customized:
+- Change the chart type (Line, Bar, Pie, etc.)
+- Modify the data and labels
+- Adjust the styling and options
+- Add more charts to the dashboard
+
+For more chart types and options, visit the [React Chart.js 2 documentation](https://react-chartjs-2.js.org/).
