@@ -1,0 +1,63 @@
+# React Component Patterns
+
+## Component Structure
+- Declare functional components using explicit typing
+- Use proper React imports
+- Destructure props at the parameter level
+- Define prop types using TypeScript interfaces
+- Use default exports for page components
+- Use named exports for reusable components
+
+## Server vs Client Components
+- Default to server components when possible
+- Add 'use client' directive only when needed
+- Server components should not:
+  - Use hooks
+  - Use browser APIs
+  - Add event listeners
+- Client components can use:
+  - React hooks
+  - Browser APIs
+  - Event handlers
+
+## Hooks Usage
+- Follow the rules of hooks
+- Use custom hooks for reusable logic
+- Keep hooks simple and focused
+- Extract complex hooks into separate files
+- Name hooks with the 'use' prefix
+
+## State Management
+- Use local state for component-specific state
+- Use context for shared state across components
+- Consider server actions for form submissions
+- Minimize client-side state
+- Prefer controlled components
+
+## Performance Optimization
+- Memoize expensive calculations
+- Use React.memo for pure components
+- Use useCallback for event handlers passed to child components
+- Use useMemo for derived values
+- Implement proper key props for lists
+
+## Error Handling
+- Implement error boundaries
+- Handle asynchronous errors properly
+- Provide meaningful error messages
+- Display fallback UI during errors
+- Log errors for debugging
+
+## Accessibility
+- Use semantic HTML elements
+- Include proper ARIA attributes
+- Ensure keyboard navigation
+- Provide text alternatives for non-text content
+- Test with screen readers
+
+## Testing
+- Write unit tests for component logic
+- Test component rendering
+- Test user interactions
+- Mock external dependencies
+- Test error states

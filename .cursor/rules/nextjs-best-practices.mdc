@@ -1,0 +1,61 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Next.js Best Practices
+
+## File Organization
+- Use the `src/` directory for better organization
+- Place pages under the `app/` directory
+- Group related routes using route groups with parentheses (e.g., `(auth)`)
+- Keep components modular and organized by feature or type
+
+## Component Structure
+- Use named exports for components
+- Separate client and server components appropriately
+- Add 'use client' directive for client components
+- Use TypeScript for type safety
+- Include JSDoc comments for complex functions
+
+## Performance
+- Use React Server Components where possible
+- Implement proper image optimization with next/image
+- Leverage static and dynamic rendering appropriately
+- Minimize client-side JavaScript
+- Implement code splitting through dynamic imports
+
+## Routing
+- Use the App Router for nested layouts
+- Implement loading states with loading.js files
+- Handle errors with error.js files
+- Create dynamic routes with brackets (e.g., [id])
+- Use catch-all routes with [...slug] where needed
+
+## Data Fetching
+- Utilize React Server Components for data fetching
+- Implement proper caching strategies
+- Use server actions for form submissions
+- Handle loading and error states
+- Implement proper pagination and infinite scrolling
+
+## Authentication
+- Use NextAuth.js for authentication
+- Implement proper session management
+- Protect routes appropriately
+- Handle authentication errors gracefully
+- Use middleware for route protection
+
+## Styling
+- Use Tailwind CSS for utility-first styling
+- Follow a consistent naming convention
+- Use CSS variables for theming
+- Implement responsive design
+- Ensure dark mode support
+
+## Testing
+- Write unit tests for components
+- Implement integration tests for page functionality
+- Test API routes
+- Use mocks for external dependencies
+- Ensure proper test coverage
