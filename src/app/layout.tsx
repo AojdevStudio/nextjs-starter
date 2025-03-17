@@ -1,6 +1,6 @@
 import './globals.css';
-import { AuthProvider } from '@/components/auth/auth-provider';
 import { Inter } from 'next/font/google';
+import { ThemeProvider } from "@/components/ui/theme-provider"
 
 // Use next built-in font loader for Inter font
 // This approach should remain stable across Next.js versions
@@ -11,11 +11,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Next.js Starter Kit',
-  description: 'A modern Next.js starter template with all the best practices',
-  keywords: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
-  authors: [{ name: 'Your Name' }],
-  creator: 'Your Name',
+  title: 'Dental Case Acceptance Analytics',
+  description: 'Analytics dashboard for dental case acceptance rates and insights',
+  keywords: ['Dental', 'Analytics', 'Case Acceptance', 'Healthcare'],
 };
 
 export default function RootLayout({
@@ -24,9 +22,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <AuthProvider>{children}</AuthProvider>
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
