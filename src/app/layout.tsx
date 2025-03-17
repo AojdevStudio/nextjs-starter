@@ -1,6 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from "@/components/ui/theme-provider"
+import { Navigation } from "@/components/Navigation"
 
 // Use next built-in font loader for Inter font
 // This approach should remain stable across Next.js versions
@@ -31,7 +32,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Navigation />
+          <main className="min-h-screen">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
